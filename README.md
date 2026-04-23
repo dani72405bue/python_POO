@@ -1,7 +1,6 @@
-
-
-# python_POO
+# POO en python
 Introducción a la Programacion Orientada a Objetos (POO)
+
 
 ## ¿por qué aprender POO?
 
@@ -45,3 +44,31 @@ class nombreClass:
 - puede definir tantos atributos como necesite
 -puede definir tantos metodos como necesite
 - puedes definir tantos parametros en el constructor y en los metodos que necesite.
+
+## ejemplo 1
+
+-crear una clase que represente una persona 
+- Atributos: nombre, apellidos y edad.
+- Metodos: mostrar la informacion de la persona.
+
+## Codigo
+
+``` python
+class persona:
+
+    def __init__(self, nombre, apellido, edad):
+        self.nombres = nombre
+        self.apellidos = apellidos
+        self.edad = edad
+
+    # Metodo para mostrar la informacion de la persona 
+
+    def mostrarPersona(self):
+    print("Nombre: ", self.nombre)
+    print("Apellidos: ",self.apellidos)
+    print("Edad: ", self.edad)
+```
+
+## representacion de RAM del objeto creado
+
+![alt text](image.png)
