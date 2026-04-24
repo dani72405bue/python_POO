@@ -72,3 +72,92 @@ class persona:
 ## representacion de RAM del objeto creado
 
 ![alt text](image.png)
+
+## Composición
+
+- consiste en la creacion de nuevas clases apartir de otras clases ya existentes que actuan como elementos compositores de la nueva
+- las clases existentes seran atributos de la nueva clase
+
+### Ejemplo
+
+una coordenada en dos dimensiones esta compuesta por dos valores (x, y), el valor de en el eje de las "x" y el valor en el eje de las "y", esto podria ser una clase
+- un cuadrado esta compuesto por cuatro coordenadas que son los cuatro vertices. esto posria ser una clase que esta compuesta por cuatro clases del objeto coordenado
+
+### Codigo python
+```Python
+class Coordenada:
+    # Metodo constructor
+    def __init__(self, X, Y):
+        self.X = X
+        self.Y = Y
+
+    def mostrarCoordenada(self):
+        print("(", self.X,",",self.Y, ")")
+
+class Cuadrado:
+    def __init__(self, v1, v2, v3, v4):
+        self.v1 = v1
+        self.v2 = v2
+        self.v3 = v3
+        self.v4 = v4
+
+    def mostrarVertices(self)
+        print("el cuadrado esta compuesto por lo  siguientes vertices:")
+        self.v1.mostrarCoordenadas()
+        self.v2.mostrarCoordenadas()
+        self.v3.mostrarCoordenadas()
+        self.v4.mostrarCoordenadas()
+```
+![alt text](image-1.png)
+
+## Encapsulacion
+
+- uno de los objetivos que tiene la POO es proteger los datos de acceso o uses no controlados, y esto es lo que se conocecomo **encapsulacion**
+- los datos (atributos) que componen una clase pueden ser de dos tipos
+    - **publicos:** los datos son accesibles sin control, es decir, los datos pueden ser usados sin ningun tipo de mecanismo que proteja ente usos no recomendados o indebidos.
+    - **privados:** los datos no pueden ser accedidos sin control y para acceder a ellos se debera implementar un metodo que acceda a ellos. de esta manera, los datos unicamente seran accedidos directamente por la propia clase. 
+- la encapsulacion tambien puede realizarse sobre los metodos.
+-la definicion de atributos privados se realiza incluyendo los caracteres "__" (dos guiones bajos) entre la palabra **self** y el nombre de atributo
+
+### Ejemplo 
+
+### Codigo python
+```Python
+class Coordenada:
+    # Metodo constructor
+    def __init__(self, X, Y):
+        self.__X = X
+        self.__Y = Y
+
+    # metodos de acceso
+    def getX(self):
+        return self.__X
+    
+    def setX(self, X):
+        self.__X = X
+
+    def getY(self):
+        return self.__Y
+
+    def setY(self, Y):
+        self.__Y = Y
+
+
+
+    def mostrarCoordenada(self):
+        print("(", self.__x,"," ,self.__y,")")
+
+class Cuadrado:
+    def __init__(self, v1, v2, v3, v4):
+        self.v1 = v1
+        self.v2 = v2
+        self.v3 = v3
+        self.v4 = v4
+
+    def mostrarVertices(self)
+        print("el cuadrado esta compuesto por lo  siguientes vertices:")
+        self.v1.mostrarCoordenadas()
+        self.v2.mostrarCoordenadas()
+        self.v3.mostrarCoordenadas()
+        self.v4.mostrarCoordenadas()
+```
