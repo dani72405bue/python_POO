@@ -1,4 +1,4 @@
-from coordenadas import coordenadas
+from coordenadas import Coordenada
 
 class Cuadrado:
     def __init__(self, v1, v2, v3, v4):
@@ -9,16 +9,16 @@ class Cuadrado:
 
     def mostrarVertices(self):
         print("el cuadrado esta compuesto por los siguientes vertices:")
-        self.v1.mostrarcoordenadas()
-        self.v2.mostrarcoordenadas()
-        self.v3.mostrarcoordenadas()
-        self.v4.mostrarcoordenadas()
+        self.v1.mostrarcoordenada()
+        self.v2.mostrarcoordenada()
+        self.v3.mostrarcoordenada()
+        self.v4.mostrarcoordenada()
 
 def main():
-    v1 = coordenadas(1, 1)
-    v2 = coordenadas(4, 1)
-    v3 = coordenadas(4, 4)
-    v4 = coordenadas(1, 4)
+    v1 = Coordenada(1, 1)
+    v2 = Coordenada(4, 1)
+    v3 = Coordenada(4, 4)
+    v4 = Coordenada(1, 4)
     cuadrado = Cuadrado(v1, v2, v3, v4)
     cuadrado.mostrarvertices
 

@@ -17,5 +17,5 @@ class Coordenada:
     def setY(self, Y):
         self.__Y = Y
         # metodo para mostrar la coordenda 
-    def mostrarcoordenda(self):
+    def mostrarcoordenada(self):
         print("(", self.__x,"," ,self.__y,")")
