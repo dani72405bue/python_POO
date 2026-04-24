@@ -15,10 +15,10 @@ class Cuadrado:
         self.v4.mostrarcoordenadas()
 
 def main():
-    v1 = Coordenadas(1, 1)
-    v2 = Coordenadas(4, 1)
-    v3 = Coordenadas(4, 4)
-    v4 = Coordenadas(1, 4)
+    v1 = coordenadas(1, 1)
+    v2 = coordenadas(4, 1)
+    v3 = coordenadas(4, 4)
+    v4 = coordenadas(1, 4)
     cuadrado = Cuadrado(v1, v2, v3, v4)
     cuadrado.mostrarvertices
 
